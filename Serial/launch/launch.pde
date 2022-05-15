@@ -15,7 +15,8 @@ public file_class data_dump;
 
 void setup()
 {
-  size(500,300);  
+  size(500,300); 
+  noLoop();
   configure_logger();
   change_logger_output(LOGGER.FILE_LOGGER);    // LOGGER.FILE_LOGGER if you want to move debug logging to a file.
                                                // File will be here ./data/log.txt
@@ -36,6 +37,7 @@ void setup()
   btn_file_open = new GButton(this, 160, 260, 65, 30);
   btn_file_open.setText("File Open");
   btn_file_open.addEventHandler(this, "btn_file_open_click"); 
+  loop();
 }
 
 void draw()
