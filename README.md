@@ -1,5 +1,5 @@
 # Serial_Processing
-Collection of classes for configuring comm ports in Processing with use case example.
+Collection of classes for run time configuring of comm ports in Processing with use case example.
 
 Read "Processing Serial Port routines.docx" for useage. <BR>Tested to work with Processing 3_5_3 and 4_0B8
 
