@@ -1,5 +1,7 @@
+import at.mukprojects.console.Console;
 import g4p_controls.G4P;
 import g4p_controls.GButton;
+import org.pmw.tinylog.Logger;
 
 serial_gui new_serial;
 
@@ -9,7 +11,7 @@ GButton btn_send;
 GButton btn_file_open;
 
 public String Serial_Config_Version = "0_0_2";
-
+public Console console;
 public static int associated_process = 0;
 public file_class data_dump;
 

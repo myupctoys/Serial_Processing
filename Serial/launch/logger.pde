@@ -1,5 +1,6 @@
 import java.util.Locale;
-import org.pmw.tinylog.*;
+import org.pmw.tinylog.Configurator;
+import org.pmw.tinylog.Level;
 
 enum LOGGER
 {
