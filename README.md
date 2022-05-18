@@ -1,7 +1,7 @@
 # Serial_Processing
-Collection of classes for configuring comm ports in Processing with use case example.
+Collection of classes for run time configuring of comm ports in Processing with use case example.
 
-Read "Processing Serial Port routines.docx" for useage. <BR>Tested to work with Processing 3_5_3 and 4_0B8
+Read "Processing Serial Port routines.docx" for useage. <BR>Tested to work with Processing 3_5_3 and 4_0B8 on W10 64bit. Some attempt started for Linux (Comm port name differences and detecting Windows/Linux)
 
 ![image](https://user-images.githubusercontent.com/5317221/168467824-481251d2-5416-43d3-85d8-d551f4b5f918.png)
 
