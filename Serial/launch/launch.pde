@@ -39,11 +39,15 @@ void setup()
   btn_file_open = new GButton(this, 160, 260, 65, 30);
   btn_file_open.setText("File Open");
   btn_file_open.addEventHandler(this, "btn_file_open_click"); 
+  console = new Console(this);
+  console.start();
   loop();
 }
 
 void draw()
 {
+  console.draw(10, height - height +10, width-20, height - 60, 14, 10, 4, 4, color(220), color(0), color(0, 255, 0));
+  console.print();
 }
 
 public void btn_exit_click(GButton source, GEvent event) 
