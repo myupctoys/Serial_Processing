@@ -46,3 +46,8 @@ public file_class open_for_write_to_file(PApplet p, int process)
     Logger.info(my_path + "\\data\\" + new_serial.specific_process[process].save_file + ".dat");
     return new_file;
 }
+
+static final javax.swing.JFrame getJFrame(final PSurface surface) 
+{
+  return (javax.swing.JFrame) ( (processing.awt.PSurfaceAWT.SmoothCanvas) surface.getNative()).getFrame();
+}

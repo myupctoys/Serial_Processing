@@ -18,18 +18,14 @@ public Console console;
 public static int associated_process = 0;
 public file_class data_dump;
 
-static final javax.swing.JFrame getJFrame(final PSurface surface) 
-{
-  return (javax.swing.JFrame) ( (processing.awt.PSurfaceAWT.SmoothCanvas) surface.getNative()).getFrame();
-}
-
 void setup()
 {
-  size(500,300); 
+  size(500,300);
+  noLoop();
+  surface.setLocation(displayWidth/2, displayHeight/2);  
     x_location = getJFrame(getSurface()).getX();
     y_location = getJFrame(getSurface()).getY();  
     
-  noLoop();
   configure_logger();
   change_logger_output(LOGGER.FILE_LOGGER);    // LOGGER.FILE_LOGGER if you want to move debug logging to a file.
                                                // File will be here ./data/log.txt
