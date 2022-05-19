@@ -10,7 +10,7 @@ GButton btn_open;
 GButton btn_send;
 GButton btn_file_open;
 
-public String Serial_Config_Version = "0_0_2";
+public String Serial_Config_Version = "0_1_2";
 public Console console;
 public static int associated_process = 0;
 public file_class data_dump;
