@@ -86,6 +86,7 @@ public class serial_gui extends PApplet
   private String my_path;
   
   private int current_process;
+  private int x_loc, y_loc;
   
   public serial_ports[] specific_process = new serial_ports[4];
   
@@ -95,11 +96,12 @@ public class serial_gui extends PApplet
    * Constructor for serial_gui
    * @param thisparent parent Applet reference
    */
-  public serial_gui(PApplet thisparent)
+  public serial_gui(PApplet thisparent, int x_loc, int y_loc)
   {
     this.myparent = thisparent;
     this.my_path = myparent.sketchPath();
-    
+    this.x_loc = x_loc;
+    this.y_loc = y_loc;
     new_file = new file_class(this.my_path + "\\data\\comms.dat");
     for(int i = 0; i < 4; i++)
     {
@@ -445,6 +447,7 @@ public class serial_gui extends PApplet
       if(window_serial == null)
         {
         window_serial = GWindow.getWindow(myparent, "Serial Port Parameters", 0, 0, 325, 380, JAVA2D);
+        window_serial.setLocation(this.x_loc - (325 + 20), this.y_loc);
         }
       window_serial.noLoop();
       PApplet app = window_serial;

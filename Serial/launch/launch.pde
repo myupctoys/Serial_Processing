@@ -10,14 +10,25 @@ GButton btn_open;
 GButton btn_send;
 GButton btn_file_open;
 
+  public static int x_location = 0;
+  public static int y_location = 0;
+
 public String Serial_Config_Version = "0_1_2";
 public Console console;
 public static int associated_process = 0;
 public file_class data_dump;
 
+static final javax.swing.JFrame getJFrame(final PSurface surface) 
+{
+  return (javax.swing.JFrame) ( (processing.awt.PSurfaceAWT.SmoothCanvas) surface.getNative()).getFrame();
+}
+
 void setup()
 {
   size(500,300); 
+    this.x_location = getJFrame(getSurface()).getX();
+    this.y_location = getJFrame(getSurface()).getY();  
+    
   noLoop();
   configure_logger();
   change_logger_output(LOGGER.FILE_LOGGER);    // LOGGER.FILE_LOGGER if you want to move debug logging to a file.
@@ -62,7 +73,7 @@ public void btn_open_click(GButton source, GEvent event)
   { //_CODE_:btn_open_click:443832:
   if(source == btn_open && event == GEvent.CLICKED)
     {   
-    new_serial = new serial_gui(this);   
+    new_serial = new serial_gui(this, x_location, y_location);   
     }
   } //_CODE_:btn_open_click:443832: 
   
