@@ -116,9 +116,10 @@ void serialEvent(Serial p)
     {
     String inString = return_rx_serial_data(p);
     Logger.info("Serial Event " + return_serial_port_name(p) + " :- " + inString +  " Process :- " + p);
-    println("Serial Event " + return_serial_port_name(p) + " :- " + inString +  " Process :- " + p);
     if(data_dump != null)
         data_dump.file_append(inString + "\n");
+    else
+        println("Serial Event " + return_serial_port_name(p) + " :- " + inString +  " Process :- " + p);
     }
 }
 
