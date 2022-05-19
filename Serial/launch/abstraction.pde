@@ -16,6 +16,9 @@ public String return_rx_serial_data(Serial p)
 {
   new_serial.specific_process[which_port_generated_serial_event(p)].serialEvent(p);
   String inString = new_serial.specific_process[which_port_generated_serial_event(p)].strarray_rx[new_serial.specific_process[which_port_generated_serial_event(p)].current_rx_pointer];
+  println("Current rx_pointer :- " + new_serial.specific_process[which_port_generated_serial_event(p)].current_rx_pointer);
+  new_serial.specific_process[which_port_generated_serial_event(p)].current_rx_pointer ++;
+  new_serial.specific_process[which_port_generated_serial_event(p)].current_rx_pointer %= 4;
 return inString;    
 }
 
