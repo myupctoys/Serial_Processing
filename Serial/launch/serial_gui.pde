@@ -92,6 +92,9 @@ public class serial_gui extends PApplet
   
   private file_class new_file; // = new file_class(sketchPath("data/comms.dat"));
   private int number_of_lines = 0;
+  
+  serial_functions specific_serial_function;
+  
   /**
    * Constructor for serial_gui
    * @param thisparent parent Applet reference
@@ -901,10 +904,11 @@ public class serial_gui extends PApplet
   { //_CODE_:btn_open:596998:
   if(button == btn_function && event == GEvent.CLICKED)
     {
-    new serial_functions(this, specific_process, this.my_path);
+    specific_serial_function = new serial_functions(this, specific_process, this.my_path, x_loc, y_loc);
     }
   }
   
+@SuppressWarnings("unused")  
   public void comm_ports_clicked(GOption source, GEvent event) 
   { //_CODE_:stop_20:417978:
       gather_serial_paramters();  

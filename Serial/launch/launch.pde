@@ -26,8 +26,8 @@ static final javax.swing.JFrame getJFrame(final PSurface surface)
 void setup()
 {
   size(500,300); 
-    this.x_location = getJFrame(getSurface()).getX();
-    this.y_location = getJFrame(getSurface()).getY();  
+    x_location = getJFrame(getSurface()).getX();
+    y_location = getJFrame(getSurface()).getY();  
     
   noLoop();
   configure_logger();
@@ -57,7 +57,7 @@ void setup()
 
 void draw()
 {
-  console.draw(10, height - height +10, width-20, height - 60, 14, 10, 4, 4, color(220), color(0), color(0, 255, 0));
+  console.draw(10, height - height +10, width-20, height - 60, 14, 10, 4, 4, color(220), color(0), color(240));
   console.print();
 }
 

@@ -25,6 +25,9 @@ public class serial_functions extends PApplet
   private PApplet myparent;
   
   String my_path;
+  
+  int function_window_x = 0;
+  int function_window_y = 0;
 
   private GPanel pnl_function_text;
   
@@ -76,15 +79,15 @@ public class serial_functions extends PApplet
   private GButton btn_exit_setup; 
   private serial_ports[] specific_process;
   
-  public serial_functions(PApplet thisparent, serial_ports[] specific_process, String my_path)
+  public serial_functions(PApplet thisparent, serial_ports[] specific_process, String my_path, int x_pos, int y_pos)
   {
     this.myparent = thisparent;
     this.specific_process = specific_process;
     this.my_path = my_path;
-    create_function_gui();
+    create_function_gui(x_pos, y_pos);
   }
   
-  private void create_function_gui()
+  private void create_function_gui(int x_pos, int y_pos)
   {
     noLoop();
     G4P.messagesEnabled(false);
@@ -95,6 +98,7 @@ public class serial_functions extends PApplet
       try
         {
         window_functions = GWindow.getWindow(myparent, "Serial Port Control Functions", 0, 0, 335, 345, JAVA2D);
+        window_functions.setLocation(x_pos - (660 + 20 + 20), y_pos);
         }
       catch (Exception e)
         {
