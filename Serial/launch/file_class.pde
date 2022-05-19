@@ -141,7 +141,6 @@ public int countLines(String filename) throws IOException
             while((line = bufferedReader.readLine()) != null) 
             {
               Logger.info(line);
-              //System.out.println(line);
               data = line;
             }  
 
