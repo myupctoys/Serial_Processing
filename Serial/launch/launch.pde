@@ -22,7 +22,7 @@ void setup()
 {
   size(500,300);
   noLoop();
-  surface.setLocation(displayWidth/2, displayHeight/2);  
+  surface.setLocation((displayWidth/2) - (width/2), (displayHeight/2) - (height/2));  
     x_location = getJFrame(getSurface()).getX();
     y_location = getJFrame(getSurface()).getY();  
     
