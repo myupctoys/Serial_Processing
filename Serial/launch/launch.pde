@@ -53,6 +53,7 @@ void setup()
 
 void draw()
 {
+  // console.draw(x, y, width, height, preferredTextSize, minTextSize, linespace, padding, strokeColor, backgroundColor, textColor)  
   console.draw(10, height - height +10, width-20, height - 60, 15, 15, 3, 3, color(220), color(0), color(240));
   console.print();
 }
