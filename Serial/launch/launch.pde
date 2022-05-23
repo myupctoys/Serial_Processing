@@ -20,9 +20,9 @@ public file_class data_dump;
 
 void setup()
 {
-  size(500,300);
+  size(1000,300);
   noLoop();
-  surface.setLocation((displayWidth/2) - (width/2), (displayHeight/2) - (height/2));  
+  surface.setLocation((displayWidth/2), (displayHeight/2) - (height/2));  
     x_location = getJFrame(getSurface()).getX();
     y_location = getJFrame(getSurface()).getY();  
     
@@ -31,7 +31,7 @@ void setup()
                                                // File will be here ./data/log.txt
   version_info();
   
-  btn_exit = new GButton(this, 430, 260, 65, 30);
+  btn_exit = new GButton(this, 930, 260, 65, 30);
   btn_exit.setText("Exit");
   btn_exit.addEventHandler(this, "btn_exit_click"); 
   
@@ -53,7 +53,7 @@ void setup()
 
 void draw()
 {
-  console.draw(10, height - height +10, width-20, height - 60, 14, 10, 4, 4, color(220), color(0), color(240));
+  console.draw(10, height - height +10, width-20, height - 60, 15, 15, 3, 3, color(220), color(0), color(240));
   console.print();
 }
 
