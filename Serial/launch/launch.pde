@@ -20,7 +20,7 @@ public file_class data_dump;
 
 void setup()
 {
-  size(1000,300);
+  size(1000,400);
   noLoop();
   surface.setLocation((displayWidth/2), (displayHeight/2) - (height/2));  
     x_location = getJFrame(getSurface()).getX();
@@ -31,19 +31,19 @@ void setup()
                                                // File will be here ./data/log.txt
   version_info();
   
-  btn_exit = new GButton(this, 930, 260, 65, 30);
+  btn_exit = new GButton(this, width-70, height - 40, 65, 30);
   btn_exit.setText("Exit");
   btn_exit.addEventHandler(this, "btn_exit_click"); 
   
-  btn_open = new GButton(this, 10, 260, 65, 30);
+  btn_open = new GButton(this, 10, height - 40, 65, 30);
   btn_open.setText("Open");
   btn_open.addEventHandler(this, "btn_open_click"); 
   
-  btn_send = new GButton(this, 85, 260, 65, 30);
+  btn_send = new GButton(this, 85, height - 40, 65, 30);
   btn_send.setText("Send");
   btn_send.addEventHandler(this, "btn_send_click");
   
-  btn_file_open = new GButton(this, 160, 260, 65, 30);
+  btn_file_open = new GButton(this, 160, height - 40, 65, 30);
   btn_file_open.setText("File Open");
   btn_file_open.addEventHandler(this, "btn_file_open_click"); 
   console = new Console(this);
