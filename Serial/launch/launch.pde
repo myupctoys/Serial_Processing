@@ -119,7 +119,7 @@ void serialEvent(Serial p)
     if(data_dump != null)
       {
         data_dump.file_append(inString + "\n");
-        println(return_serial_port_name(p) + " :- " + inString +  " Process :- " + p);
+        println(return_serial_port_name(p) + " :- " + inString);
       }
     else
         println("Serial Event " + return_serial_port_name(p) + " :- " + inString +  " Process :- " + p);
