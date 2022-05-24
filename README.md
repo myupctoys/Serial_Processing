@@ -9,3 +9,7 @@ Note 4_08B has a message on the console __MOVE__ X and Y position of the launch 
 Thanks to Quarks http://www.lagers.org.uk/g4p/index.html for such a clean GUI Library for Processing<br>
 Thanks to https://tinylog.org/v2/ for such a KISS logging tool.<br>
 Then of course Processing https://processing.org.
+  <BR><BR>
+    TODO<BR>
+    Add text box to launch gui for file name and indicate if opened.<BR>
+    Add text box to launch for string to send with Send button.
