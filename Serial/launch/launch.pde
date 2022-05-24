@@ -13,7 +13,7 @@ GButton btn_file_open;
   public static int x_location = 0;
   public static int y_location = 0;
 
-public String Serial_Config_Version = "0_1_2";
+public String Serial_Config_Version = "0_1_4";
 public Console console;
 public static int associated_process = 0;
 public file_class data_dump;
@@ -21,6 +21,7 @@ public file_class data_dump;
 void setup()
 {
   size(1000,400);
+  println("Serial Processing runtime configuration V" + Serial_Config_Version);
   noLoop();
   surface.setLocation((displayWidth/2) - 100, (displayHeight/2) - (height/2));  
     x_location = getJFrame(getSurface()).getX();
@@ -100,7 +101,7 @@ public void btn_send_click(GButton source, GEvent event) throws Exception
     {
       try
       {
-      String send_string = "Stefan Morley " + new_serial.specific_process[associated_process].getMyPortname();
+      String send_string = "Testing TX Data " + new_serial.specific_process[associated_process].getMyPortname();
       new_serial.specific_process[associated_process].send_serial_command(send_string, 100, false);
       }  
     catch(Exception e)

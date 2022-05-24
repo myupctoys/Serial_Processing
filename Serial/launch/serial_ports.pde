@@ -1,7 +1,7 @@
 /**
  * <H1>Serial port class</H1>
  * Serial port variables and functions related to serial port.<br>
- * Requires Quarks G4P library and latest jssc.jar file not in processing distro.
+ * Requires Quarks G4P library and latest jssc.jar. Old jssc version had issues.
  * Copyright (c) [2022] [Stefan Morley]
  * @author SBM
  * @version 0_2_1
