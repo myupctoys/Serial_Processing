@@ -12,5 +12,6 @@ Then of course Processing https://processing.org.
   <BR><BR>
     __TODO__<BR>
     Add text box to launch gui for file name saved and indicate if opened for logging.<BR>
-    Add text box to launch for string to send with Send button.
-    Add option to add date time group with comma for CSV to logs and Console for each process.
+    Add text box to launch for string to send with Send button.<BR>
+    Add option to add date time group with comma for CSV to logs and Console for each process.<BR>
+    Check all processes create and log to corresponding log file.
