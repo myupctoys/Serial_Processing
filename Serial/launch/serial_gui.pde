@@ -760,6 +760,10 @@ public class serial_gui extends PApplet
   if(source == btn_exit_setup && event == GEvent.CLICKED)
     {    
     save_settings();
+    if(specific_serial_function != null)
+        {
+        specific_serial_function.window_functions.close();
+        }    
     window_serial.close();
     }
   } //_CODE_:btn_exit_setup:443832:
