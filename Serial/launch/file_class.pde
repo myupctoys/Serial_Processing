@@ -22,6 +22,16 @@ class file_class
     setNew_file(file_name);
   }
   
+  public String get_new_file()
+  {
+    return new_file;
+  }
+
+  public void set_new_file(String new_file)
+  {
+    this.new_file = new_file;
+  }  
+  
 public boolean is_file_exist(String file_name)
 {
   File temp = new File(file_name);

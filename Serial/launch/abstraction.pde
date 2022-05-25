@@ -46,8 +46,8 @@ return is_valid;
 public file_class open_for_write_to_file(PApplet p, int process)
 {
     String my_path = p.sketchPath();
-    file_class new_file = new file_class(my_path + "\\data\\" + new_serial.specific_process[process].save_file + ".dat");
-    Logger.info(my_path + "\\data\\" + new_serial.specific_process[process].save_file + ".dat");
+    file_class new_file = new file_class(my_path + "\\data\\" + new_serial.specific_process[process].getsave_file() + ".dat");
+    Logger.info(new_file.get_new_file());
     return new_file;
 }
 
