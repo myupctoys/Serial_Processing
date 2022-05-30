@@ -16,10 +16,10 @@ GOption opt_date_time_stamp;
   public static int x_location = 0;
   public static int y_location = 0;
 
-public String Serial_Config_Version = "0_1_4";
+public String Serial_Config_Version = "0_1_6";
 public Console console;
 public static int associated_process = 0;
-public file_class data_dump;
+public file_class[] data_dump;
 
 void setup()
 {
@@ -62,6 +62,9 @@ void setup()
 
   opt_date_time_stamp = new GOption(this, 365, 25, 100, 30, "DTG Stamp");
   pnl_launch.addControl(opt_date_time_stamp);
+  
+  data_dump = new file_class[4];
+  
   console = new Console(this);
   console.start();
   loop();
@@ -105,14 +108,26 @@ public void btn_file_open_click(GButton source, GEvent event)
   { //_CODE_:btn_file_open_click:443832:
   if(source == btn_file_open && event == GEvent.CLICKED)
     {
+      Logger.info("btn_file_open_click clicked");
     try
       {
-       data_dump = open_for_write_to_file(this, associated_process);
+        for(int i = 0; i < 4; i++)
+        {
+          if (new_serial.specific_process[i].getPort_is_open() == true)
+            {
+            data_dump[i] = open_for_write_to_file(this, i);
+            }
+          else
+          {
+            Logger.info("Comm port not yet open :- " + this);
+            println("Comm port not yet open");
+          }
+        }
       }
     catch (Exception e)
       {
-        Logger.info("Comm port not yet open :- " + this);
-        println("Comm port not yet open");
+        Logger.info("Comm port not yet open or file already open :- " + this);
+        println("Comm port not yet open or file already open");
       }
     }
   } //_CODE_:btn_file_open_click:443832: 
@@ -144,7 +159,8 @@ public void serialEvent(Serial p)
     String inString = return_rx_serial_data(p);
     String writeinString = "";
     Logger.info("Serial Event " + return_serial_port_name(p) + " :- " + inString +  " Process :- " + p);
-    if(data_dump != null)
+    int port_that_caused_event = which_port_generated_serial_event(p);
+    if(data_dump[port_that_caused_event] != null)
       {
         if(opt_date_time_stamp.isSelected() == true)
           {
@@ -154,13 +170,14 @@ public void serialEvent(Serial p)
         {
           writeinString = inString;
         }
-        data_dump.file_append(writeinString + "\n");
+        data_dump[port_that_caused_event].file_append(writeinString + "\n");
         println(return_serial_port_name(p) + " :- " + writeinString);
       }
     else {
       writeinString = inString;
       println("Serial Event " + return_serial_port_name(p) + " :- " + writeinString + " Process :- " + p);
     }
+
     }
 }
 

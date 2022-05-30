@@ -10,8 +10,8 @@ Thanks to Quarks http://www.lagers.org.uk/g4p/index.html for such a clean GUI Li
 Thanks to https://tinylog.org/v2/ for such a KISS logging tool.<br>
 Then of course Processing https://processing.org.
   <BR><BR>
-    __TODO__<BR>
-Add text box to launch gui for file name saved and indicate if opened for logging. Need to come up with a logical way of indicating which of four files is open, after last TODO is complete.<BR>
-Add text box to launch for string to send with Send button. DONE<BR>
-Add option to add date time group with comma for CSV to logs and Console for each process. DONE<BR>
-Check all processes create and log to corresponding log file. Not workign ATM. Only logs to process #0 file.<BR>
+    <b>TODO__</b><BR>
+    <b>#1</b> Need to come up with a logical way of indicating which of four files is open.<BR>
+    <b>#2</b> Add text box to launch for string to send with Send button. <b>DONE</b><BR>
+    <b>#3</b> Add option to add date time group with comma for CSV to logs and Console for each process. <b>DONE</b><BR>
+    <b>#4</b> Check all processes create and log to corresponding log file. <b>DONE</b><BR>
