@@ -4,7 +4,6 @@ import g4p_controls.GButton;
 import org.pmw.tinylog.Logger;
 
 serial_gui new_serial;
-
 GButton btn_exit;
 GButton btn_open;
 GButton btn_send;
@@ -13,13 +12,13 @@ GTextField txt_string_to_send;
 GPanel pnl_launch;
 GOption opt_date_time_stamp;
 
-  public static int x_location = 0;
-  public static int y_location = 0;
+public static int x_location = 0;
+public static int y_location = 0;
 
 public String Serial_Config_Version = "0_1_6";
 public Console console;
 public static int associated_process = 0;
-public file_class[] data_dump;
+public static file_class[] data_dump;
 
 void setup()
 {
@@ -34,7 +33,7 @@ void setup()
   change_logger_output(LOGGER.FILE_LOGGER);    // LOGGER.FILE_LOGGER if you want to move debug logging to a file.
                                                // File will be here ./data/log.txt
   version_info();
-  
+
   pnl_launch = new GPanel(this, 10, height -70, width - 20, 60, "");
   btn_exit = new GButton(this, width-90, 25, 65, 30);
   btn_exit.setText("Exit");
@@ -62,9 +61,9 @@ void setup()
 
   opt_date_time_stamp = new GOption(this, 365, 25, 100, 30, "DTG Stamp");
   pnl_launch.addControl(opt_date_time_stamp);
-  
+
   data_dump = new file_class[4];
-  
+
   console = new Console(this);
   console.start();
   loop();
@@ -72,7 +71,7 @@ void setup()
 
 void draw()
 {
-  // console.draw(x, y, width, height, preferredTextSize, minTextSize, linespace, padding, strokeColor, backgroundColor, textColor)  
+  // console.draw(x, y, width, height, preferredTextSize, minTextSize, linespace, padding, strokeColor, backgroundColor, textColor)
   console.draw(10, height - height + 10, width-20, height - 90, 15, 15, 4, 4, color(220), color(0), color(240));
   console.print();
 }
@@ -87,7 +86,7 @@ public String generate_dtg()
     return day() + "_" + month() + "_" + year() + " " + hour() + "_" + minute() + "_" + second();
   }
 
-public void btn_exit_click(GButton source, GEvent event) 
+public void btn_exit_click(GButton source, GEvent event)
   { //_CODE_:btn_exit_click:443832:
   if(source == btn_exit && event == GEvent.CLICKED)
     {  
@@ -185,8 +184,8 @@ public void serialEvent(Serial p)
 public void handleButtonEvents(GButton button, GEvent event) 
 { /* code */ 
 
-}  
+}
 
-  public void handlePanelEvents(GPanel panel, GEvent event) { /* code */ }
-  public void handleToggleControlEvents(GToggleControl option, GEvent event) { /* code */ }
-  public void handleTextEvents(GEditableTextControl textcontrol, GEvent event) { /* code */ }
+public void handlePanelEvents(GPanel panel, GEvent event) { /* code */ }
+public void handleToggleControlEvents(GToggleControl option, GEvent event) { /* code */ }
+public void handleTextEvents(GEditableTextControl textcontrol, GEvent event) { /* code */ }

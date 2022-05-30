@@ -7,22 +7,23 @@
  * MIT Licence attached
 */
  
+import org.pmw.tinylog.Logger;
 import java.io.*;
 
 class file_class 
 {
   private String new_file;
 
-  public file_class()
+public file_class()
   {
   }
-  
-  public file_class(String file_name)
+
+public file_class(String file_name)
   {
     setNew_file(file_name);
   }
   
-  public String get_new_file()
+public String get_new_file()
   {
     return new_file;
   }
@@ -106,7 +107,7 @@ public int countLines(String filename) throws IOException
         }
         catch(IOException ex) 
         {
-        Logger.info("Error Wrting to file :- " + new_file);
+        Logger.info("Error Writing to file :- " + new_file);
         }
         return false;
     }
