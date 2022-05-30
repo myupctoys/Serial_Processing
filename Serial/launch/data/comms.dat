@@ -1,1 +1,1 @@
-COM6,115200,8,1.0,1000,Control,N,10,0,false,Control,Test1,File1COM6,115200,8,1.0,1000,Control,N,10,1,false,Control,Test2,File2COM7,9600,8,1.0,1000,Control,N,10,2,false,Control,Test3,File3COM8,9600,8,1.0,1000,Control,N,10,3,false,Control,Test4,File4
+COM16,9600,8,1.0,1000,Control,N,10,0,false,Control,Test1,File1COM6,115200,8,1.0,1000,Control,N,10,1,false,Control,Test2,File2COM7,9600,8,1.0,1000,Control,N,10,2,false,Control,Test3,File3COM8,9600,8,1.0,1000,Control,N,10,3,false,Control,Test4,File4

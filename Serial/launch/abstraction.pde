@@ -43,13 +43,13 @@ public boolean operate_on_new_serial_event(Serial p)
 return is_valid;
 }
 
-public file_class open_for_write_to_file(PApplet p, int process)
-{
+  public file_class open_for_write_to_file(PApplet p, int process)
+  {
     String my_path = p.sketchPath();
-    file_class new_file = new file_class(my_path + "\\data\\" + new_serial.specific_process[process].getsave_file() + ".dat");
+    file_class new_file = new file_class(my_path + "\\data\\" + new_serial.specific_process[process].getsave_file() + " " + generate_dtg_file() + ".csv");
     Logger.info(new_file.get_new_file());
     return new_file;
-}
+  }
 
 static final javax.swing.JFrame getJFrame(final PSurface surface) 
 {
