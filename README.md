@@ -18,5 +18,5 @@ Then of course Processing https://processing.org.
     <b>#2</b> Add text box to launch for string to send with Send button. <b>DONE</b><BR>
     <b>#3</b> Add option to add date time group with comma for CSV to logs and Console for each process. <b>DONE</b><BR>
     <b>#4</b> Check all processes create and log to corresponding log file. <b>DONE</b><BR>
-    <b>#5</b> Implement binary file transfers.<BR>
+    <b>#5</b> Implement binary/ascii file transfers.<BR>
     <b>#6</b> Simple way of indicating which of 4 processes one might want to sent the text to.
